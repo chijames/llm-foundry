@@ -6,11 +6,13 @@ from composer.algorithms import (
     GatedLinearUnits,
     GradientClipping,
     LowPrecisionLayerNorm,
+    LabelSmoothing,
 )
 
 from llmfoundry.registry import algorithms
 
 algorithms.register('gradient_clipping', func=GradientClipping)
+algorithms.register('label_smoothing', func=LabelSmoothing)
 algorithms.register('alibi', func=Alibi)
 algorithms.register('gated_linear_units', func=GatedLinearUnits)
 algorithms.register('low_precision_layernorm', func=LowPrecisionLayerNorm)
